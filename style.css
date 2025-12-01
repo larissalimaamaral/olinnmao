@@ -1,0 +1,218 @@
+/* ========================================================
+    ESTILO GERAL: LIVRO ANTIGO (Tons de Verde e Amarelo)
+    ========================================================
+*/
+body {
+    /* Fonte Clássica de Livro */
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    
+    /* Fundo de cor de papel antigo/creme */
+    background-color: #FBF0D9; /* Amarelo muito claro */
+    
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #C8C9CC;
+}
+
+/* Estiliza cada seção como uma "página" ou "capítulo" */
+section {
+    background-color: #FFFFF0; /* Quase branco (tom de papel mais claro) */
+    padding: 30px 40px;
+    margin: 20px 0;
+    border-radius: 4px;
+    /* Linha lateral em Verde Escuro */
+    border-left: 5px solid #006400; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    /* Títulos de Capítulo - Verde Limão Vibrante */
+    color: #8BC34A; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    /* Linha de separação em Amarelo Dourado */
+    border-bottom: 2px solid #FFD700; 
+    padding-bottom: 10px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+h2 {
+    /* Subtítulos - Verde Bandeira */
+    color: #006400;
+    font-size: 1.5em;
+    font-style: italic;
+    border-bottom: none; 
+    margin-top: 25px;
+}
+
+h3, h4, p {
+    /* Corpo do texto - Verde Escuro para Leitura */
+    color: #1A531A; 
+    line-height: 1.7;
+    text-align: justify;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #D3D3D3;
+    margin: 40px 0;
+}
+
+.estrela {
+    /* Estrelas - Amarelo Ouro */
+    color: #FFD700;
+    margin-left: 5px;
+}
+
+/* ========================================================
+    SEÇÃO ESPECÍFICA: TIPOS DE LIMÃO (ESTILO UNDERTALE + Tons de Limão)
+    ========================================================
+*/
+#Tipos_de_limão {
+    /* Estilo Undertale Mantido */
+    color: black; 
+    background-color: #F0FFF0; /* Fundo mais verde claro */
+    border-radius: 0; 
+    border: 8px solid #006400; /* Borda Verde Escura */
+    font-family: 'Courier New', monospace; 
+    font-size: 1.2em;
+    line-height: 1.5;
+    padding: 30px; 
+    width: auto; 
+    height: auto; 
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Garante que os elementos internos herdem o estilo Undertale/Verde */
+#Tipos_de_limão h1, #Tipos_de_limão h2, #Tipos_de_limão h3, #Tipos_de_limão p {
+    color: #1A531A; /* Verde Escuro */
+    border: none;
+    font-family: 'Courier New', monospace;
+    line-height: 1.4;
+    text-align: left;
+}
+
+
+/* ========================================================
+    SEÇÃO SURPRESA (GATINHO) - TONS DE LIMÃO E DOURADO
+    ========================================================
+*/
+
+#CartaSurpresa {
+    padding-bottom: 50px;
+    border-color: #FFD700; /* Borda Amarelo Ouro */
+}
+
+.titulo-surpresa {
+    /* Título Pacifico - Amarelo Ouro */
+    font-family: 'Pacifico', cursive; 
+    color: #FFD700; 
+    border: none;
+    font-size: 3em;
+    margin-bottom: 40px;
+    text-transform: none;
+}
+
+/* Contêiner que simula a cabeça do gatinho */
+#envelope-gatinho {
+    /* Forma da Cabeça: Oval/Arredondada */
+    background-color: #8BC34A; /* Cor do gatinho: Verde Limão */
+    border-radius: 50px; 
+    /* ... outros estilos ... */
+}
+
+.orelha-esquerda, .orelha-direita {
+    /* Forma das Orelhas: Triângulos */
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent; 
+    border-right: 30px solid transparent; 
+    border-bottom: 50px solid #8BC34A; /* Cor da orelha: Verde Limão */
+    top: -50px; 
+    /* ... posicionamento ... */
+}
+
+#envelope-gatinho:hover {
+    background-color: #9CCC65; /* Verde Limão mais claro no hover */
+}
+
+/* Orelhas do Gatinho */
+.orelha-esquerda, .orelha-direita {
+    border-bottom: 50px solid #8BC34A; /* Orelhas Verde Limão */
+    /* ... (outros estilos de orelha omitidos por brevidade) ... */
+}
+.orelha-esquerda { left: 100px; transform: rotate(-10deg); }
+.orelha-direita { right: 100px; transform: rotate(10deg); }
+
+
+/* Conteúdo interno da carta */
+#carta-conteudo-gato {
+    background-color: #FFFFF0; 
+    border-radius: 30px; 
+    padding: 20px;
+    margin: 0 10px 10px 10px;
+    
+    /* ESTILOS PARA ESCONDER/REVELAR */
+    opacity: 0;
+    max-height: 0; 
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.8s ease;
+}
+
+/* Classe adicionada pelo JS para mostrar o conteúdo */
+#carta-conteudo-gato.revelado {
+    opacity: 1;
+    max-height: 1000px; 
+}
+
+#mensagem-clique {
+    color: #006400; /* Mensagem de clique em Verde Escuro */
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 40px 20px;
+    transition: opacity 0.5s;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Estilos de texto e imagem dentro do gatinho */
+.titulo-personagem {
+    font-family: 'Pacifico', cursive;
+    color: #FFD700; /* Título do personagem em Amarelo Ouro */
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+.descricao-personagem {
+    font-family: Georgia, serif;
+    color: #1A531A; /* Verde Escuro */
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.imagem-personagem {
+    max-width: 90%;
+    height: auto;
+    border: 5px solid #FFD700; /* Borda da imagem em Amarelo Ouro */
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.fonte-imagem {
+    font-family: Georgia, serif;
+    display: block;
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+}
+    
